@@ -15,9 +15,9 @@
     color: var(--text-color);
 }
 
-.dark-theme {
-    --primary: #fff;
-    --secondary: #000;
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(254, 194, 96, 0.25);
+    border-color: var(--third);
 }
 
 body {
@@ -59,6 +59,10 @@ h2 {
     margin-bottom: 2rem;
 }
 
+h6 {
+    font-family: "Bree Serif", serif;
+}
+
 .custom-btn {
     background-color: var(--btn);
     color: var(--secondary);
@@ -68,6 +72,7 @@ h2 {
     background-color: var(--btn1-hover);
     color: var(--secondary);
 }
+
 .custom-btn:active {
     background-color: transparent;
     border: 1px solid var(--btn);
@@ -77,6 +82,7 @@ h2 {
     background-color: var(--btn2);
     color: var(--secondary);
 }
+
 .visit-url:hover {
     background-color: var(--btn2-hover);
     color: var(--secondary);
@@ -86,6 +92,7 @@ h2 {
     background-color: transparent;
     border: 1px solid var(--btn2);
 }
+
 table .delete-url:active {
     background-color: transparent !important;
     color: var(--text-color) !important;
@@ -97,4 +104,21 @@ table .delete-url:active {
     border-left: none;
     border-right: none;
     padding-block: 1rem;
+}
+
+[data-bs-dismiss="modal"] {
+    cursor: pointer;
+}
+
+.modal-body ul li i {
+    color: var(--btn1-hover);
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-body ul li:hover i {
+    color: var(--btn);
+}
+
+.modal-body ul li {
+    font-size: 18px;
 }
