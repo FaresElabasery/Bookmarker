@@ -10,6 +10,10 @@ if (localStorage.getItem("BookmarkList")) {
 } else {
     BookmarkList = [];
 }
+document.forms[0].addEventListener("submit", function (e) {
+    e.preventDefault();
+    addBookmark();
+});
 function addBookmark() {
     if (Bname.value == "" || Burl.value == "") {
         displayModal("empty");
@@ -60,7 +64,7 @@ function deleteUrl(index) {
     save();
 }
 function validateUrl(url) {
-    var regex = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ig
+    var regex = /(http(s)?):\/\/[(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&\\=]*)/i
     return regex.test(url);
 }
 Burl.addEventListener('input', function () {
