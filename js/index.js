@@ -58,6 +58,8 @@ function save() {
 function clearForm() {
     Bname.value = '';
     Burl.value = "";
+    Bname.classList.remove('is-valid');
+    Burl.classList.remove('is-valid');
 }
 function deleteUrl(index) {
     BookmarkList.splice(index, 1);
